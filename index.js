@@ -54,7 +54,7 @@ bot.on('message', jsonMsg => {
 });
 
 
-bot.on('end' ()=>{
+bot.on('end', ()=>{
     client.channels.get(config.channelid).send('**Bot disconnected**');
 });
 
