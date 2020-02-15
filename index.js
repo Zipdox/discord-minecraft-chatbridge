@@ -44,6 +44,7 @@ bot.on('message', jsonMsg => {
     iterateMsg(jsonMsg.json);
     // console.log(rawText);
     if(rawText.length == 0) return;
+    if (!/\S/.test(rawText)) return;
     rawText = '```' + rawText.replace(new RegExp('`', 'g'), '​`') + '```'; 
     client.channels.get(config.channelid).send(rawText.replace(new RegExp('​````', 'g'), '​```'));
 });
